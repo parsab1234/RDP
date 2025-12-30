@@ -61,7 +61,7 @@ jobs:
 
 
       - name: Create RDP User with Secure Password
-
+        shell: pwsh
         run: |
 
           Add-Type -AssemblyName System.Security
@@ -116,7 +116,7 @@ jobs:
 
 
       - name: Install Tailscale
-
+        shell: pwsh
         run: |
 
           $tsUrl = "https://pkgs.tailscale.com/stable/tailscale-setup-1.82.0-amd64.msi"
@@ -133,7 +133,7 @@ jobs:
 
 
       - name: Establish Tailscale Connection
-
+        shell: pwsh
         run: |
 
           # Bring up Tailscale with the provided auth key and set a unique hostname
@@ -173,7 +173,7 @@ jobs:
      
 
       - name: Verify RDP Accessibility
-
+        shell: pwsh
         run: |
 
           Write-Host "Tailscale IP: $env:TAILSCALE_IP"
@@ -196,7 +196,7 @@ jobs:
 
 
       - name: Maintain Connection
-
+        shell: pwsh
         run: |
 
           Write-Host "`n=== RDP ACCESS ==="
