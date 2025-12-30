@@ -18,7 +18,7 @@ jobs:
     steps:
 
       - name: Configure Core RDP Settings
-      
+        shell: pwsh
         run: |
 
           # Enable Remote Desktop and disable Network Level Authentication (if needed)
